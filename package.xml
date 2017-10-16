@@ -10,7 +10,7 @@
   <email>slusarz@horde.org</email>
   <active>yes</active>
  </lead>
- <date>2016-07-12</date>
+ <date>2017-10-17</date>
  <version>
   <release>1.1.1</release>
   <api>1.0.0</api>
@@ -89,6 +89,7 @@
        <file name=".scrutinizer.yml" role="php" />
        <file name=".travis.yml" role="php" />
        <file name="CHANGELOG-1.0.md" role="php" />
+       <file name="composer.json" role="php" />
        <file name="LICENSE" role="php" />
        <file name="phpunit.xml.dist" role="php" />
        <file name="README.md" role="php" />
@@ -174,6 +175,7 @@
        <file name=".gitignore" role="php" />
        <file name=".travis.yml" role="php" />
        <file name="apigen.neon" role="php" />
+       <file name="composer.json" role="php" />
        <file name="LICENSE" role="php" />
        <file name="Makefile" role="php" />
        <file name="mkdocs.yml" role="php" />
@@ -187,13 +189,6 @@
      <file name="autoload.php" role="php" />
     </dir> <!-- /bundle/vendor -->
    </dir> <!-- /bundle -->
-   <dir name="doc">
-    <dir name="Horde">
-     <dir name="Mongo">
-      <file name="COPYING" role="doc" />
-     </dir> <!-- /doc/Horde/Mongo -->
-    </dir> <!-- /doc/Horde -->
-   </dir> <!-- /doc -->
    <dir name="lib">
     <dir name="Horde">
      <dir name="Mongo">
@@ -204,6 +199,7 @@
      </dir> <!-- /lib/Horde/Mongo -->
     </dir> <!-- /lib/Horde -->
    </dir> <!-- /lib -->
+   <file name="LICENSE" role="doc" />
   </dir> <!-- / -->
  </contents>
  <dependencies>
@@ -233,22 +229,19 @@
  </dependencies>
  <phprelease>
   <filelist>
-   <install as="Horde/Mongo/vendor/autoload.php" name="bundle/vendor/autoload.php" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/.gitignore" name="bundle/vendor/alcaeus/mongo-php-adapter/.gitignore" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/.scrutinizer.yml" name="bundle/vendor/alcaeus/mongo-php-adapter/.scrutinizer.yml" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/.travis.yml" name="bundle/vendor/alcaeus/mongo-php-adapter/.travis.yml" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/CHANGELOG-1.0.md" name="bundle/vendor/alcaeus/mongo-php-adapter/CHANGELOG-1.0.md" />
-   <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/LICENSE" name="bundle/vendor/alcaeus/mongo-php-adapter/LICENSE" />
-   <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/phpunit.xml.dist" name="bundle/vendor/alcaeus/mongo-php-adapter/phpunit.xml.dist" />
-   <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/README.md" name="bundle/vendor/alcaeus/mongo-php-adapter/README.md" />
+   <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/composer.json" name="bundle/vendor/alcaeus/mongo-php-adapter/composer.json" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/AbstractCursor.php" name="bundle/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/AbstractCursor.php" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/ExceptionConverter.php" name="bundle/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/ExceptionConverter.php" />
-   <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/TypeConverter.php" name="bundle/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/TypeConverter.php" />
-   <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/TypeInterface.php" name="bundle/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/TypeInterface.php" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/Helper/ReadPreference.php" name="bundle/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/Helper/ReadPreference.php" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/Helper/SlaveOkay.php" name="bundle/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/Helper/SlaveOkay.php" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/Helper/WriteConcern.php" name="bundle/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/Helper/WriteConcern.php" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/Helper/WriteConcernConverter.php" name="bundle/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/Helper/WriteConcernConverter.php" />
+   <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/TypeConverter.php" name="bundle/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/TypeConverter.php" />
+   <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/TypeInterface.php" name="bundle/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/TypeInterface.php" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/lib/Mongo/functions.php" name="bundle/vendor/alcaeus/mongo-php-adapter/lib/Mongo/functions.php" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/lib/Mongo/Mongo.php" name="bundle/vendor/alcaeus/mongo-php-adapter/lib/Mongo/Mongo.php" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/lib/Mongo/MongoBinData.php" name="bundle/vendor/alcaeus/mongo-php-adapter/lib/Mongo/MongoBinData.php" />
@@ -287,6 +280,10 @@
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/lib/Mongo/MongoUpdateBatch.php" name="bundle/vendor/alcaeus/mongo-php-adapter/lib/Mongo/MongoUpdateBatch.php" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/lib/Mongo/MongoWriteBatch.php" name="bundle/vendor/alcaeus/mongo-php-adapter/lib/Mongo/MongoWriteBatch.php" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/lib/Mongo/MongoWriteConcernException.php" name="bundle/vendor/alcaeus/mongo-php-adapter/lib/Mongo/MongoWriteConcernException.php" />
+   <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/LICENSE" name="bundle/vendor/alcaeus/mongo-php-adapter/LICENSE" />
+   <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/phpunit.xml.dist" name="bundle/vendor/alcaeus/mongo-php-adapter/phpunit.xml.dist" />
+   <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/README.md" name="bundle/vendor/alcaeus/mongo-php-adapter/README.md" />
+   <install as="Horde/Mongo/vendor/autoload.php" name="bundle/vendor/autoload.php" />
    <install as="Horde/Mongo/vendor/composer/autoload_classmap.php" name="bundle/vendor/composer/autoload_classmap.php" />
    <install as="Horde/Mongo/vendor/composer/autoload_files.php" name="bundle/vendor/composer/autoload_files.php" />
    <install as="Horde/Mongo/vendor/composer/autoload_namespaces.php" name="bundle/vendor/composer/autoload_namespaces.php" />
@@ -299,6 +296,7 @@
    <install as="Horde/Mongo/vendor/mongodb/mongodb/.gitignore" name="bundle/vendor/mongodb/mongodb/.gitignore" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/.travis.yml" name="bundle/vendor/mongodb/mongodb/.travis.yml" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/apigen.neon" name="bundle/vendor/mongodb/mongodb/apigen.neon" />
+   <install as="Horde/Mongo/vendor/mongodb/mongodb/composer.json" name="bundle/vendor/mongodb/mongodb/composer.json" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/LICENSE" name="bundle/vendor/mongodb/mongodb/LICENSE" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/Makefile" name="bundle/vendor/mongodb/mongodb/Makefile" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/mkdocs.yml" name="bundle/vendor/mongodb/mongodb/mkdocs.yml" />
@@ -312,15 +310,14 @@
    <install as="Horde/Mongo/vendor/mongodb/mongodb/src/Collection.php" name="bundle/vendor/mongodb/mongodb/src/Collection.php" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/src/Database.php" name="bundle/vendor/mongodb/mongodb/src/Database.php" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/src/DeleteResult.php" name="bundle/vendor/mongodb/mongodb/src/DeleteResult.php" />
-   <install as="Horde/Mongo/vendor/mongodb/mongodb/src/functions.php" name="bundle/vendor/mongodb/mongodb/src/functions.php" />
-   <install as="Horde/Mongo/vendor/mongodb/mongodb/src/InsertManyResult.php" name="bundle/vendor/mongodb/mongodb/src/InsertManyResult.php" />
-   <install as="Horde/Mongo/vendor/mongodb/mongodb/src/InsertOneResult.php" name="bundle/vendor/mongodb/mongodb/src/InsertOneResult.php" />
-   <install as="Horde/Mongo/vendor/mongodb/mongodb/src/UpdateResult.php" name="bundle/vendor/mongodb/mongodb/src/UpdateResult.php" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/src/Exception/BadMethodCallException.php" name="bundle/vendor/mongodb/mongodb/src/Exception/BadMethodCallException.php" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/src/Exception/Exception.php" name="bundle/vendor/mongodb/mongodb/src/Exception/Exception.php" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/src/Exception/InvalidArgumentException.php" name="bundle/vendor/mongodb/mongodb/src/Exception/InvalidArgumentException.php" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/src/Exception/RuntimeException.php" name="bundle/vendor/mongodb/mongodb/src/Exception/RuntimeException.php" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/src/Exception/UnexpectedValueException.php" name="bundle/vendor/mongodb/mongodb/src/Exception/UnexpectedValueException.php" />
+   <install as="Horde/Mongo/vendor/mongodb/mongodb/src/functions.php" name="bundle/vendor/mongodb/mongodb/src/functions.php" />
+   <install as="Horde/Mongo/vendor/mongodb/mongodb/src/InsertManyResult.php" name="bundle/vendor/mongodb/mongodb/src/InsertManyResult.php" />
+   <install as="Horde/Mongo/vendor/mongodb/mongodb/src/InsertOneResult.php" name="bundle/vendor/mongodb/mongodb/src/InsertOneResult.php" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/src/Model/BSONArray.php" name="bundle/vendor/mongodb/mongodb/src/Model/BSONArray.php" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/src/Model/BSONDocument.php" name="bundle/vendor/mongodb/mongodb/src/Model/BSONDocument.php" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/src/Model/CollectionInfo.php" name="bundle/vendor/mongodb/mongodb/src/Model/CollectionInfo.php" />
@@ -363,9 +360,10 @@
    <install as="Horde/Mongo/vendor/mongodb/mongodb/src/Operation/Update.php" name="bundle/vendor/mongodb/mongodb/src/Operation/Update.php" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/src/Operation/UpdateMany.php" name="bundle/vendor/mongodb/mongodb/src/Operation/UpdateMany.php" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/src/Operation/UpdateOne.php" name="bundle/vendor/mongodb/mongodb/src/Operation/UpdateOne.php" />
-   <install as="COPYING" name="doc/Horde/Mongo/COPYING" />
+   <install as="Horde/Mongo/vendor/mongodb/mongodb/src/UpdateResult.php" name="bundle/vendor/mongodb/mongodb/src/UpdateResult.php" />
    <install as="Horde/Mongo/Client.php" name="lib/Horde/Mongo/Client.php" />
    <install as="Horde/Mongo/Collection/Index.php" name="lib/Horde/Mongo/Collection/Index.php" />
+   <install as="LICENSE" name="LICENSE" />
   </filelist>
  </phprelease>
  <changelog>
@@ -470,7 +468,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2016-07-12</date>
+   <date>2017-10-17</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
 * 
