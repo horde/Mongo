@@ -10,7 +10,7 @@
   <email>slusarz@horde.org</email>
   <active>yes</active>
  </lead>
- <date>2017-10-17</date>
+ <date>2017-10-27</date>
  <version>
   <release>1.1.1</release>
   <api>1.0.0</api>
@@ -188,6 +188,13 @@
      <file name="autoload.php" role="php" />
     </dir> <!-- /bundle/vendor -->
    </dir> <!-- /bundle -->
+   <dir name="doc">
+    <dir name="Horde">
+     <dir name="Mongo">
+      <file name="CHANGES" role="doc" />
+     </dir> <!-- /doc/Horde/Mongo -->
+    </dir> <!-- /doc/Horde -->
+   </dir> <!-- /doc -->
    <dir name="lib">
     <dir name="Horde">
      <dir name="Mongo">
@@ -360,6 +367,7 @@
    <install as="Horde/Mongo/vendor/mongodb/mongodb/src/Operation/UpdateMany.php" name="bundle/vendor/mongodb/mongodb/src/Operation/UpdateMany.php" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/src/Operation/UpdateOne.php" name="bundle/vendor/mongodb/mongodb/src/Operation/UpdateOne.php" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/src/UpdateResult.php" name="bundle/vendor/mongodb/mongodb/src/UpdateResult.php" />
+   <install as="CHANGES" name="doc/Horde/Mongo/CHANGES" />
    <install as="Horde/Mongo/Client.php" name="lib/Horde/Mongo/Client.php" />
    <install as="Horde/Mongo/Collection/Index.php" name="lib/Horde/Mongo/Collection/Index.php" />
    <install as="LICENSE" name="LICENSE" />
@@ -467,7 +475,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2017-10-17</date>
+   <date>2017-10-27</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
    </notes>

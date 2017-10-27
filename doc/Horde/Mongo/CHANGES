@@ -1,0 +1,55 @@
+----------
+v1.1.1-git
+----------
+
+
+------
+v1.1.0
+------
+
+[jan] Support mongodb extension too (Remi Collet <fedora@famillecollet.com>).
+
+
+------
+v1.0.3
+------
+
+[jan] Add Composer definition.
+
+
+------
+v1.0.2
+------
+
+[mjr] Prevent data loss due to forced selection of incorrect database.
+
+
+------
+v1.0.1
+------
+
+[mms] Fix checking/creating indices when a MongoCollection object is passed to
+      checkIndices()/createIndices() (Bug #12353).
+
+
+------
+v1.0.0
+------
+
+Final release.
+
+
+---------
+v1.0.0RC1
+---------
+
+[mms] Add Horde_Mongo_Client#checkIndices() and
+      Horde_Mongo_Client#createIndices().
+[mms] Add Horde_Mongo_Collection_Index interface.
+
+
+-----------
+v1.0.0beta1
+-----------
+
+First beta release.
