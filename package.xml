@@ -10,7 +10,7 @@
   <email>slusarz@horde.org</email>
   <active>yes</active>
  </lead>
- <date>2016-07-12</date>
+ <date>2017-10-27</date>
  <version>
   <release>1.1.1</release>
   <api>1.0.0</api>
@@ -89,6 +89,7 @@
        <file name=".scrutinizer.yml" role="php" />
        <file name=".travis.yml" role="php" />
        <file name="CHANGELOG-1.0.md" role="php" />
+       <file name="composer.json" role="php" />
        <file name="LICENSE" role="php" />
        <file name="phpunit.xml.dist" role="php" />
        <file name="README.md" role="php" />
@@ -174,6 +175,7 @@
        <file name=".gitignore" role="php" />
        <file name=".travis.yml" role="php" />
        <file name="apigen.neon" role="php" />
+       <file name="composer.json" role="php" />
        <file name="LICENSE" role="php" />
        <file name="Makefile" role="php" />
        <file name="mkdocs.yml" role="php" />
@@ -241,6 +243,7 @@
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/LICENSE" name="bundle/vendor/alcaeus/mongo-php-adapter/LICENSE" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/phpunit.xml.dist" name="bundle/vendor/alcaeus/mongo-php-adapter/phpunit.xml.dist" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/README.md" name="bundle/vendor/alcaeus/mongo-php-adapter/README.md" />
+   <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/composer.json" name="bundle/vendor/alcaeus/mongo-php-adapter/composer.json" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/AbstractCursor.php" name="bundle/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/AbstractCursor.php" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/ExceptionConverter.php" name="bundle/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/ExceptionConverter.php" />
    <install as="Horde/Mongo/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/TypeConverter.php" name="bundle/vendor/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter/TypeConverter.php" />
@@ -299,6 +302,7 @@
    <install as="Horde/Mongo/vendor/mongodb/mongodb/.gitignore" name="bundle/vendor/mongodb/mongodb/.gitignore" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/.travis.yml" name="bundle/vendor/mongodb/mongodb/.travis.yml" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/apigen.neon" name="bundle/vendor/mongodb/mongodb/apigen.neon" />
+   <install as="Horde/Mongo/vendor/mongodb/mongodb/composer.json" name="bundle/vendor/mongodb/mongodb/composer.json" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/LICENSE" name="bundle/vendor/mongodb/mongodb/LICENSE" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/Makefile" name="bundle/vendor/mongodb/mongodb/Makefile" />
    <install as="Horde/Mongo/vendor/mongodb/mongodb/mkdocs.yml" name="bundle/vendor/mongodb/mongodb/mkdocs.yml" />
@@ -470,7 +474,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2016-07-12</date>
+   <date>2017-10-27</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
 * 
