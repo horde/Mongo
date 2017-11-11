@@ -28,5 +28,9 @@ dependencies:
     php: ^5.3 || ^7
   optional:
     pear:
-      pecl.php.net/mongo: ^1.3
-      pecl.php.net/mongodb: '*'
+      pecl.php.net/mongo:
+        version: ^1.3
+        providesextension: mongo
+      pecl.php.net/mongodb:
+        version: '*'
+        providesextension: mongodb
