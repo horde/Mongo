@@ -2,7 +2,7 @@
 id: Mongo
 name: Mongo
 full: MongoDB client library
-description: >
+description: >-
   Provides an API to ensure that the PECL Mongo extension can be used
   consistently across various Horde packages.
 list: dev
