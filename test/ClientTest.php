@@ -28,7 +28,7 @@ class NullClientTest extends TestCase
 {
     public function setUp(): void
     {
-        $this->nullClient = new Client();
+        $this->nullClient = new Client('mongodb://127.0.01');
     }
 
     public function testGetsConstructed()

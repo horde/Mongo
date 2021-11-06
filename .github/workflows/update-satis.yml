@@ -51,11 +51,13 @@ jobs:
         export REPO=$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}' | sed -e "s/:refs//")
         export WORK_DIR=/home/runner/
         export BIN_DIR="${WORK_DIR}/bin"
+        export github_repository=$(echo "$GITHUB_REPOSITORY" | tr '[:upper:]' '[:lower:]')
         composer create-project composer/satis:dev-main
-        php satis/bin/satis build -vvv  maintaina-com.github.io/satis.json maintaina-com.github.io/ $GITHUB_REPOSITORY
+        echo $github_repository
+        php satis/bin/satis build -vvv  maintaina-com.github.io/satis.json maintaina-com.github.io/ horde/mongo
         cd maintaina-com.github.io
         git add include/ index.html p2/ packages.json
-        git commit -m "Update for $GITHUB_REPOSITORY"
+        git commit -m "Update for horde/mongo"
         git push
 
 
