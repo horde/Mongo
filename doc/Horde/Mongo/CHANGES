@@ -2,7 +2,9 @@
 v2.0.0alpha2
 ------------
 
-
+[rla] Enabled PHP 8.
+[rla] Converted to namespaced, added minimal unit test.
+|+
 
 
 ------------

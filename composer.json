@@ -1,5 +1,4 @@
 {
-    "minimum-stability": "dev",
     "name": "horde/mongo",
     "description": "MongoDB client library",
     "type": "library",
@@ -12,7 +11,7 @@
             "role": "lead"
         }
     ],
-    "time": "2021-07-04",
+    "time": "2021-11-06",
     "repositories": [
         {
             "type": "composer",
@@ -20,13 +19,24 @@
         }
     ],
     "require": {
-        "php": "^7"
+        "php": "^7.4 || ^8"
     },
-    "require-dev": {},
+    "require-dev": {
+        "horde/test": "^3",
+        "alcaeus/mongo-php-adapter": "^1.2"
+    },
     "suggest": {},
     "autoload": {
         "psr-0": {
             "Horde_Mongo": "lib/"
+        },
+        "psr-4": {
+            "Horde\\Mongo\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Horde\\Mongo\\Test\\": "test/"
         }
     }
 }

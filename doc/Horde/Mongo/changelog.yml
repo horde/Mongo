@@ -8,8 +8,10 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |+
-    
+  notes: |
+    [rla] Enabled PHP 8.
+    [rla] Converted to namespaced, added minimal unit test.
+    |+
 2.0.0alpha1:
   api: 1.0.0
   state:

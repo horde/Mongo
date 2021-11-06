@@ -23,8 +23,13 @@ license:
   uri: http://www.horde.org/licenses/lgpl21
 dependencies:
   required:
-    php: ^7
+    php: ^7.4 || ^8
+    composer: ~
   optional:
     extensions:
-      mongo: 1.3
+      alcaeus/mongo-php-adapter: ^1.2
       mongodb: '*'
+  dev:
+    composer:
+      horde/test: ^3
+      alcaeus/mongo-php-adapter: ^1.2
