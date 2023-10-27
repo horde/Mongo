@@ -14,21 +14,15 @@
     "version": "1.1.1",
     "time": "2017-11-14",
     "repositories": [
-        {
-            "type": "pear",
-            "url": "https://pear.horde.org"
-        }
     ],
     "require": {
         "php": "^5.3 || ^7"
     },
     "suggest": {
-        "pear-pecl.php.net/mongo": "^1.3",
-        "pear-pecl.php.net/mongodb": "*"
+        "ext-mongo": "^1.3",
+        "ext-mongodb": "*"
     },
     "replace": {
-        "pear-pear.horde.org/Horde_Mongo": "1.*",
-        "pear-horde/Horde_Mongo": "1.*"
     },
     "autoload": {
         "psr-0": {
